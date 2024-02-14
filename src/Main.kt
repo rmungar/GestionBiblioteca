@@ -1,5 +1,6 @@
 fun main() {
-    Gestion.mostrarMenu()
-    Gestion.separador()
-    Gestion.nuevoUsuario()
+    val gestor = Gestion()
+    gestor.mostrarMenu()
+    gestor.separador()
+    gestor.nuevoUsuario()
 }
