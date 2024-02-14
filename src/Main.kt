@@ -1,6 +1,12 @@
 fun main() {
     val gestor = Gestion()
-    gestor.mostrarMenu()
-    gestor.separador()
-    gestor.nuevoUsuario()
+    while (true) {
+        gestor.mostrarMenu()
+        gestor.seleccionMenu()
+        println("¿Deseas continuar? (s/n) -> ")
+        if (readln() == "n"){
+            println("CERRANDO...")
+            break
+        }
+    }
 }
