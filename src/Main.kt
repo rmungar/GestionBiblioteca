@@ -1,3 +1,5 @@
 fun main() {
-    println("Hello World!")
+    Gestion.mostrarMenu()
+    Gestion.separador()
+    Gestion.nuevoUsuario()
 }
