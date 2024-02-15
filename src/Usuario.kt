@@ -1,22 +1,66 @@
-sealed class Usuario(val id: String, val nombre:String) {
-    class Estudiante(id: String, nombre: String, val carrera: String): Usuario(id,nombre){
+/**
+ * Clase sellada que contiene como propiedades:
+ * @property id -> String que identifica a un usuario
+ * @property nombre -> String del nombre del usuario
+ */
+
+sealed class Usuario(val nombre:String) {
+    companion object{
+        var cont = 0
+        val id: Int = generarId()
+        fun generarId(): Int{
+            return ++cont
+        }
+    }
+
+    /**
+     * Clase que contiene como propiedades heredadas de Usuario:
+     * @property id -> String que identifica a un usuario
+     * @property nombre -> String del nombre del usuario
+     * Y propiedad propia:
+     * @property carrera -> String que representa los estudios del usuario
+     */
+    class Estudiante(nombre: String, private val carrera: String): Usuario(nombre){
         init {
-            require(id.isNotBlank()) {"El ID es obligatorio"}
             require(nombre.isNotBlank()) {"El nombre no puede ser un campo vacío"}
             require(carrera.isNotBlank()) {"La carrera no puede estar vacía"}
         }
+        val id = generarId()
+        override fun toString(): String {
+            return "Estudiante: $nombre con ID: $id estudiando: $carrera"
+        }
     }
-    class Profesor(id: String, nombre: String, val departamento: String): Usuario(id, nombre){
+
+    /**
+     * Clase que contiene como propiedades heredadas de Usuario:
+     * @property id -> String que identifica a un usuario
+     * @property nombre -> String del nombre del usuario
+     * Y propiedad propia:
+     * @property departamento -> String que representa el área de trabajo del usuario
+     */
+    class Profesor(nombre: String, private val departamento: String): Usuario(nombre){
         init {
-            require(id.isNotBlank()) {"El ID es obligatorio"}
             require(nombre.isNotBlank()) {"El nombre no puede ser un campo vacío"}
             require(departamento.isNotBlank()) {"El campo departamento no puede estar vacío"}
         }
+        val id = generarId()
+        override fun toString(): String {
+            return "Profesor: $nombre con ID: $id del departamento: $departamento"
+        }
     }
-    class Visitante(id: String, nombre: String): Usuario(id,nombre){
+
+    /**
+     * Clase que contiene como propiedades heredadas de Usuario:
+     * @property id -> String que identifica a un usuario
+     * @property nombre -> String del nombre del usuario
+     */
+    class Visitante(nombre: String): Usuario(nombre){
         init {
-            require(id.isNotBlank()) {"El ID es obligatorio"}
             require(nombre.isNotBlank()) {"El nombre no puede ser un campo vacío"}
+        }
+        val id = generarId()
+        override fun toString(): String {
+            return "Visitante: $nombre con ID: $id"
         }
     }
 }
