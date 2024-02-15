@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="91102264-765b-49e4-99c5-e6e8bc48ccb1" name="Changes" comment="Continuar con Gestion y comentar">
-      <change afterPath="$PROJECT_DIR$/src/Multimedia.kt" afterDir="false" />
+    <list default="true" id="91102264-765b-49e4-99c5-e6e8bc48ccb1" name="Changes" comment="Solo falta comentar">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DVD.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/DVD.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Gestion.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gestion.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Libro.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Libro.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Revista.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Revista.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Multimedia.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Multimedia.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Usuario.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Usuario.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -68,11 +65,20 @@
       <option name="project" value="LOCAL" />
       <updated>1707936061395</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Solo falta comentar">
+      <option name="closed" value="true" />
+      <created>1707952817286</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1707952817286</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Continuar con Gestion y comentar" />
-    <option name="LAST_COMMIT_MESSAGE" value="Continuar con Gestion y comentar" />
+    <MESSAGE value="Solo falta comentar" />
+    <option name="LAST_COMMIT_MESSAGE" value="Solo falta comentar" />
   </component>
 </project>
