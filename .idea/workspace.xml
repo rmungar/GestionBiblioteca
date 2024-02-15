@@ -4,15 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="91102264-765b-49e4-99c5-e6e8bc48ccb1" name="Changes" comment="Continuar con Gestion y comentar">
-      <change afterPath="$PROJECT_DIR$/src/Multimedia.kt" afterDir="false" />
+    <list default="true" id="91102264-765b-49e4-99c5-e6e8bc48ccb1" name="Changes" comment="Preguntar por las listas">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DVD.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Gestion.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gestion.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Libro.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Revista.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Usuario.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Usuario.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,15 +35,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Kotlin.MainKt.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "Merging master",
-    "kotlin-language-version-configured": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Kotlin.MainKt.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-21.0.1-openjdk-21.0.1-4caba194b151-23eed401" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -76,12 +76,21 @@
       <option name="project" value="LOCAL" />
       <updated>1707952817286</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Preguntar por las listas">
+      <option name="closed" value="true" />
+      <created>1708010996449</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1708010996449</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Solo falta comentar" />
     <MESSAGE value="Continuar con Gestion y comentar" />
-    <option name="LAST_COMMIT_MESSAGE" value="Continuar con Gestion y comentar" />
+    <MESSAGE value="Preguntar por las listas" />
+    <option name="LAST_COMMIT_MESSAGE" value="Preguntar por las listas" />
   </component>
 </project>

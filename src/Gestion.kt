@@ -14,7 +14,7 @@ class Gestion {
     private var estudiantes = mutableListOf<Usuario.Estudiante>()
     private var profesores = mutableListOf<Usuario.Profesor>()
     private var visitantes = mutableListOf<Usuario.Visitante>()
-    private val usuarios:List<MutableList<Usuario>> = listOf(estudiantes, profesores, visitantes)
+    private val usuarios = listOf(estudiantes, profesores, visitantes)
     private var libros = mutableListOf<Multimedia>()
     private var revistas = mutableListOf<Multimedia>()
     private var DVDs = mutableListOf<Multimedia>()
