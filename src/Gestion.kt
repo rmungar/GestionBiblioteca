@@ -114,19 +114,17 @@ class Gestion {
     private fun nuevoUsuario(){
         print("Ingrese el nombre del usuario: ")
         val nombre = readln()
-        separador()
         opcionesAddUsuario()
         val tipo = readln().toInt()
-        separador()
         when (tipo){
             1 -> { print("¿Qué carrera estudias? ")
-                val carrera = readln().replaceFirstChar { it.uppercase() }
+                val carrera = readln().lowercase().replaceFirstChar { it.uppercase() }
                 val usuario = Usuario.Estudiante(nombre, carrera)
                 estudiantes.add(usuario)
                 println("ESTUDIANTE AÑADIDO")
             }
             2 -> { print("¿De que departamento eres? ")
-                val departamento = readln().replaceFirstChar { it.uppercase() }
+                val departamento = readln().lowercase().replaceFirstChar { it.uppercase() }
                 val profesor = Usuario.Profesor(nombre, departamento)
                 profesores.add(profesor)
                 println("PROFESOR AÑADIDO")
@@ -173,9 +171,9 @@ class Gestion {
         when (opcion){
             1 -> {
                 print("Nombre del libro: ")
-                val nombre = readln().replaceFirstChar { it.uppercase() }
+                val nombre = readln().lowercase().replaceFirstChar { it.uppercase() }
                 print("Nombre del autor: ")
-                val autor = readln().replaceFirstChar { it.uppercase() }
+                val autor = readln().lowercase().replaceFirstChar { it.uppercase() }
                 print("Año de publicación: ")
                 val year = readln().toInt()
                 val libro = Multimedia.Libro(nombre,autor,year)
@@ -184,7 +182,7 @@ class Gestion {
             }
             2 -> {
                 print("Nombre de la revista: ")
-                val nombre = readln().replaceFirstChar { it.uppercase() }
+                val nombre = readln().lowercase().replaceFirstChar { it.uppercase() }
                 print("Issue de la revista: ")
                 val issue = readln().toInt()
                 print("Año de publicación: ")
@@ -195,9 +193,9 @@ class Gestion {
             }
             3 -> {
                 print("Nombre del DVD: ")
-                val nombre = readln().replaceFirstChar { it.uppercase() }
+                val nombre = readln().lowercase().replaceFirstChar { it.uppercase() }
                 print("Nombre del director: ")
-                val director = readln().replaceFirstChar { it.uppercase() }
+                val director = readln().lowercase().replaceFirstChar { it.uppercase() }
                 print("Año de publicación: ")
                 val year = readln().toInt()
                 val dvd = Multimedia.DVD(nombre,director,year)
@@ -216,16 +214,16 @@ class Gestion {
         val opcion = readln().toInt()
         when (opcion){
             1 -> { print("Titulo del libro: ")
-                val nombre = readln().replaceFirstChar { it.uppercase() }
+                val nombre = readln().lowercase().replaceFirstChar { it.uppercase() }
                 libros.forEach { if (it.Titulo == nombre) libros.remove(it) }
 
             }
             2 -> { print("Título de la revista: ")
-                val nombre = readln().replaceFirstChar { it.uppercase() }
+                val nombre = readln().lowercase().replaceFirstChar { it.uppercase() }
                 revistas.forEach { if (it.Titulo == nombre) revistas.remove(it) }
             }
             3 -> { print("Título del DVD: ")
-                val nombre = readln().replaceFirstChar { it.uppercase() }
+                val nombre = readln().lowercase().replaceFirstChar { it.uppercase() }
                 DVDs.forEach { if (it.Titulo == nombre) DVDs.remove(it) }
             }
             else -> println("Opción no válida")
@@ -250,7 +248,7 @@ class Gestion {
                     when (opcion) {
                         1 -> {
                             print("Nombre del libro: ")
-                            val nombre = readln().replaceFirstChar { it.uppercase() }
+                            val nombre = readln().lowercase().replaceFirstChar { it.uppercase() }
                             val libro = libros.find { it.Titulo == nombre }
                             if (libro != null ) {
                                 if (!ocupaciones.contains(Pair(usuario, libro))) {
@@ -264,7 +262,7 @@ class Gestion {
                         }
                         2 -> {
                             print("Nombre de la revista: ")
-                            val nombre = readln().replaceFirstChar { it.uppercase() }
+                            val nombre = readln().lowercase().replaceFirstChar { it.uppercase() }
                             val revista = revistas.find { it.Titulo == nombre }
                             if (revista != null) {
                                 if (!ocupaciones.contains(Pair(usuario, revista))) {
@@ -278,7 +276,7 @@ class Gestion {
                         }
                         3 -> {
                             print("Nombre del DVD: ")
-                            val nombre = readln().replaceFirstChar { it.uppercase() }
+                            val nombre = readln().lowercase().replaceFirstChar { it.uppercase() }
                             val dvd = DVDs.find { it.Titulo == nombre }
                             if (dvd != null) {
                                 if (!ocupaciones.contains(Pair(usuario, dvd))) {
@@ -303,7 +301,7 @@ class Gestion {
                     when (opcion) {
                         1 -> {
                             print("Nombre del libro: ")
-                            val nombre = readln().replaceFirstChar { it.uppercase() }
+                            val nombre = readln().lowercase().replaceFirstChar { it.uppercase() }
                             val libro = libros.find { it.Titulo == nombre }
                             if (libro != null) {
                                 if (!ocupaciones.contains(Pair(usuario, libro))) {
@@ -317,7 +315,7 @@ class Gestion {
                         }
                         2 -> {
                             print("Nombre de la revista: ")
-                            val nombre = readln().replaceFirstChar { it.uppercase() }
+                            val nombre = readln().lowercase().replaceFirstChar { it.uppercase() }
                             val revista = revistas.find { it.Titulo == nombre }
                             if (revista != null) {
                                 if (!ocupaciones.contains(Pair(usuario, revista))) {
@@ -331,7 +329,7 @@ class Gestion {
                         }
                         3 -> {
                             print("Nombre del DVD: ")
-                            val nombre = readln().replaceFirstChar { it.uppercase() }
+                            val nombre = readln().lowercase().replaceFirstChar { it.uppercase() }
                             val dvd = DVDs.find { it.Titulo == nombre }
                             if (dvd != null) {
                                 if (!ocupaciones.contains(Pair(usuario, dvd))) {
@@ -358,7 +356,7 @@ class Gestion {
      */
     private fun desocuparLibro(){
         println("Ingrese el nombre del libro o el usuario: ")
-        val entrada = readln()
+        val entrada = readln().lowercase().replaceFirstChar { it.uppercase() }
         val liberado = ocupaciones.find { it.first.nombre == entrada || it.second.Titulo == entrada }
         ocupaciones.remove(liberado)
     }

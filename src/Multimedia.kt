@@ -17,7 +17,7 @@ sealed class Multimedia(open val Titulo: String) {
             require(Año> 0) {"No tenemos libros de antes de Cristo"}
         }
         override fun toString(): String {
-            return "Libro: $Titulo, de $Autor publicado en $Año"
+            return "Libro: $Titulo, de $Autor publicado en el año: $Año"
         }
     }
 
@@ -35,7 +35,7 @@ sealed class Multimedia(open val Titulo: String) {
             require(Año > 0) {"No tenemos DVDs de antes de Cristo"}
         }
         override fun toString(): String {
-            return "DVD: $Titulo, de $Director publicado en $Año"
+            return "DVD: $Titulo, de $Director publicado en el año: $Año"
         }
     }
 
@@ -53,7 +53,7 @@ sealed class Multimedia(open val Titulo: String) {
             require(Año > 0) {"No tenemos revistas de antes de Cristo"}
         }
         override fun toString(): String {
-            return "Resvista: $Titulo, con issue: $Issue publicado en $Año"
+            return "Resvista: $Titulo, con issue: $Issue publicado en el año: $Año"
         }
     }
 }

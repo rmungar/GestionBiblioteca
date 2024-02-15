@@ -1,3 +1,5 @@
+import kotlin.random.Random
+
 /**
  * Clase sellada que contiene como propiedades:
  * @property id -> String que identifica a un usuario
@@ -6,10 +8,16 @@
 
 sealed class Usuario(val nombre:String) {
     companion object{
-        var cont = 0
+        var ids = mutableListOf<Int>()
         val id: Int = generarId()
         fun generarId(): Int{
-            return ++cont
+            while (true) {
+                val id = Random.nextInt(1,9999)
+                if (!ids.contains(id)) {
+                    ids.add(id)
+                    return id
+                }
+            }
         }
     }
 
@@ -23,6 +31,7 @@ sealed class Usuario(val nombre:String) {
     class Estudiante(nombre: String, private val carrera: String): Usuario(nombre){
         init {
             require(nombre.isNotBlank()) {"El nombre no puede ser un campo vacío"}
+            nombre.lowercase().replaceFirstChar { it.uppercase() }
             require(carrera.isNotBlank()) {"La carrera no puede estar vacía"}
         }
         val id = generarId()
@@ -41,6 +50,7 @@ sealed class Usuario(val nombre:String) {
     class Profesor(nombre: String, private val departamento: String): Usuario(nombre){
         init {
             require(nombre.isNotBlank()) {"El nombre no puede ser un campo vacío"}
+            nombre.lowercase().replaceFirstChar { it.uppercase() }
             require(departamento.isNotBlank()) {"El campo departamento no puede estar vacío"}
         }
         val id = generarId()
@@ -57,6 +67,7 @@ sealed class Usuario(val nombre:String) {
     class Visitante(nombre: String): Usuario(nombre){
         init {
             require(nombre.isNotBlank()) {"El nombre no puede ser un campo vacío"}
+            nombre.lowercase().replaceFirstChar { it.uppercase() }
         }
         val id = generarId()
         override fun toString(): String {

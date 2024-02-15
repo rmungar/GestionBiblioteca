@@ -1,5 +1,6 @@
 fun main() {
     try {
+        println("INICIANDO...")
         val gestor = Gestion()
         while (true) {
             gestor.mostrarMenu()
