@@ -24,7 +24,7 @@ class Gestion {
     /**
      * Imprime un espacio de longuitud personalizable.
      */
-    private fun separador(){
+     fun separador(){
         for (i in 1..5) println()
     }
     //--------------------------------------------------MOSTRAR---------------------------------------------------//
@@ -119,20 +119,23 @@ class Gestion {
         when (tipo){
             1 -> { print("¿Qué carrera estudias? ")
                 val carrera = readln().lowercase().replaceFirstChar { it.uppercase() }
-                val usuario = Usuario.Estudiante(nombre, carrera)
-                estudiantes.add(usuario)
+                val estudiante = Usuario.Estudiante(nombre, carrera)
+                estudiantes.add(estudiante)
                 println("ESTUDIANTE AÑADIDO")
+                println(estudiante.toString())
             }
             2 -> { print("¿De que departamento eres? ")
                 val departamento = readln().lowercase().replaceFirstChar { it.uppercase() }
                 val profesor = Usuario.Profesor(nombre, departamento)
                 profesores.add(profesor)
                 println("PROFESOR AÑADIDO")
+                println(profesor.toString())
             }
             3 -> {
                 val visitante = Usuario.Visitante(nombre)
                 visitantes.add(visitante)
                 println("VISITANTE AÑADIDO")
+                println(visitante.toString())
             }
             else -> println("Opción no válida")
         }

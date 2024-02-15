@@ -3,6 +3,7 @@ fun main() {
         println("INICIANDO...")
         val gestor = Gestion()
         while (true) {
+            gestor.separador()
             gestor.mostrarMenu()
             gestor.seleccionMenu()
             println("¿Deseas continuar? (s/n) -> ")
